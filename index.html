@@ -95,6 +95,22 @@ header .wrap{display:flex;justify-content:space-between;align-items:center;}
 .hero-stats .l{font-size:0.78rem;color:rgba(247,245,240,0.6);}
 .hero-art svg{width:100%;height:auto;}
 
+/* Lifestyle / cozy bands */
+.lifestyle-band{background:var(--white);border-bottom:1px solid #E3DDCE;}
+.lifestyle-band .wrap{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:center;padding:56px 28px;}
+.lifestyle-band.reverse .wrap{grid-template-columns:1.05fr 1fr;}
+.lifestyle-band.reverse .lifestyle-art{order:2;}
+.lifestyle-art svg{width:100%;height:auto;border-radius:6px;display:block;}
+.lifestyle-copy .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.78rem;color:var(--brass);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:10px;}
+.lifestyle-copy h2{font-size:1.9rem;margin-bottom:16px;}
+.lifestyle-copy p{font-size:1rem;color:#43413a;line-height:1.85;max-width:52ch;}
+.lifestyle-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+.lifestyle-tags span{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--rust);background:rgba(140,74,61,0.08);border:1px solid rgba(140,74,61,0.25);padding:6px 12px;border-radius:20px;}
+@media (max-width:820px){
+  .lifestyle-band .wrap, .lifestyle-band.reverse .wrap{grid-template-columns:1fr;padding:40px 24px;}
+  .lifestyle-band.reverse .lifestyle-art{order:0;}
+}
+
 .btn{
   display:inline-block;
   background:var(--brass);
@@ -284,6 +300,65 @@ footer a:hover{text-decoration:underline;}
   </div>
 </section>
 
+<section class="lifestyle-band">
+  <div class="wrap">
+    <div class="lifestyle-art">
+      <svg viewBox="0 0 440 340" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="cozyWall" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F6E7C9"/>
+            <stop offset="100%" stop-color="#EAD3A3"/>
+          </linearGradient>
+          <linearGradient id="cozyWindow" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F3B65E"/>
+            <stop offset="55%" stop-color="#E89355"/>
+            <stop offset="100%" stop-color="#D96B4B"/>
+          </linearGradient>
+          <radialGradient id="lampGlow" cx="50%" cy="35%" r="65%">
+            <stop offset="0%" stop-color="#FFE3A8" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="#FFE3A8" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect x="0" y="0" width="440" height="340" rx="10" fill="url(#cozyWall)"/>
+        <rect x="26" y="26" width="150" height="190" rx="6" fill="url(#cozyWindow)"/>
+        <rect x="26" y="26" width="150" height="190" rx="6" fill="none" stroke="#B9954A" stroke-width="5"/>
+        <line x1="101" y1="26" x2="101" y2="216" stroke="#B9954A" stroke-width="4"/>
+        <line x1="26" y1="121" x2="176" y2="121" stroke="#B9954A" stroke-width="4"/>
+        <circle cx="130" cy="80" r="22" fill="#FCEBC4" opacity="0.9"/>
+        <path d="M26,216 Q101,160 176,216" fill="#5E8B5A" opacity="0.55"/>
+        <ellipse cx="335" cy="300" rx="95" ry="14" fill="#C9A874" opacity="0.4"/>
+        <rect x="255" y="160" width="14" height="140" rx="4" fill="#8C5A3A"/>
+        <path d="M262,80 C300,80 320,120 310,160 C340,150 350,190 320,205 C345,210 340,250 305,245 C300,270 240,270 232,245 C205,250 195,215 222,205 C195,195 205,155 235,158 C222,120 235,82 262,80 Z" fill="#8C4A3D"/>
+        <rect x="212" y="245" width="110" height="18" rx="9" fill="#6E3A30"/>
+        <rect x="200" y="255" width="134" height="45" rx="10" fill="#A9603F"/>
+        <circle cx="205" cy="300" r="12" fill="#6E3A30"/>
+        <circle cx="329" cy="300" r="12" fill="#6E3A30"/>
+        <rect x="300" y="150" width="6" height="60" fill="#3A322A"/>
+        <ellipse cx="303" cy="146" rx="34" ry="18" fill="url(#lampGlow)"/>
+        <path d="M303,146 L272,128 L334,128 Z" fill="#E8D8B5" stroke="#B9954A" stroke-width="2"/>
+        <g opacity="0.85">
+          <rect x="358" y="215" width="10" height="85" rx="4" fill="#5E8B5A"/>
+          <path d="M363,120 C330,150 335,190 363,215 C391,190 396,150 363,120 Z" fill="#6FA368"/>
+          <path d="M363,140 C345,165 348,190 363,205 C378,190 381,165 363,140 Z" fill="#5E8B5A"/>
+        </g>
+        <path d="M0,300 Q220,270 440,300 L440,340 L0,340 Z" fill="#DFC9A0"/>
+        <rect x="55" y="300" width="60" height="40" rx="3" fill="#C9A874"/>
+        <rect x="120" y="300" width="60" height="40" rx="3" fill="#D9BC7C"/>
+      </svg>
+    </div>
+    <div class="lifestyle-copy">
+      <div class="eyebrow">Un milieu de vie, pas juste un logement</div>
+      <h2>Un chez-soi chaleureux, où il fait bon vivre</h2>
+      <p>À la Cité St-Calixte, chaque logement est pensé comme un véritable cocon : lumière douce, matériaux chauds, espaces qui invitent à se poser. C'est le genre d'endroit où l'on rentre chez soi avec le sourire, entouré du calme et de la nature de Saint-Calixte.</p>
+      <div class="lifestyle-tags">
+        <span>Ambiance zen &amp; paisible</span>
+        <span>Confort au quotidien</span>
+        <span>Convivialité</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" style="padding-top:0;">
   <div class="wrap">
     <div class="section-head" style="text-align:center;">
@@ -326,16 +401,65 @@ footer a:hover{text-decoration:underline;}
   </div>
 </section>
 
-<section class="section" style="padding-top:0;">
+<section class="lifestyle-band reverse">
   <div class="wrap">
-    <div class="section-head" style="text-align:center;">
+    <div class="lifestyle-art">
+      <svg viewBox="0 0 440 300" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="duskSky" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F6C36B"/>
+            <stop offset="45%" stop-color="#E89355"/>
+            <stop offset="100%" stop-color="#C96B4E"/>
+          </linearGradient>
+          <linearGradient id="lakeWater" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#E8A467"/>
+            <stop offset="100%" stop-color="#8C4A3D"/>
+          </linearGradient>
+          <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFE9B0"/>
+            <stop offset="100%" stop-color="#F6C36B" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="440" height="300" fill="url(#duskSky)"/>
+        <circle cx="330" cy="95" r="70" fill="url(#sunGlow)"/>
+        <circle cx="330" cy="95" r="32" fill="#FFE9B0"/>
+        <rect x="0" y="175" width="440" height="125" fill="url(#lakeWater)"/>
+        <ellipse cx="330" cy="178" rx="34" ry="10" fill="#FFE9B0" opacity="0.5"/>
+        <g fill="#5E4530">
+          <path d="M20,175 L45,90 L70,175 Z"/>
+          <path d="M55,175 L85,70 L115,175 Z"/>
+          <path d="M100,175 L122,105 L144,175 Z"/>
+          <path d="M360,175 L385,100 L410,175 Z"/>
+          <path d="M395,175 L418,115 L440,175 Z"/>
+        </g>
+        <g fill="#6E533B" opacity="0.9">
+          <path d="M20,175 L45,105 L70,175 Z"/>
+          <path d="M55,175 L85,90 L115,175 Z"/>
+          <path d="M360,175 L385,118 L410,175 Z"/>
+        </g>
+        <path d="M150,230 Q220,205 300,235 L300,300 L150,300 Z" fill="#7A5A38" opacity="0.5"/>
+        <ellipse cx="225" cy="222" rx="30" ry="6" fill="#3A322A" opacity="0.6"/>
+        <rect x="195" y="222" width="60" height="4" fill="#5E4530"/>
+        <rect x="193" y="222" width="4" height="34" fill="#5E4530"/>
+        <rect x="253" y="222" width="4" height="34" fill="#5E4530"/>
+        <g opacity="0.9">
+          <ellipse cx="300" cy="248" rx="24" ry="7" fill="#3A322A"/>
+          <path d="M280,248 Q300,236 320,248" fill="none" stroke="#5E4530" stroke-width="2"/>
+        </g>
+        <g fill="#2E2A24" opacity="0.8">
+          <path d="M-5,300 C40,270 90,300 140,280 C190,260 250,295 300,275 C350,255 400,290 445,270 L445,300 Z"/>
+        </g>
+      </svg>
+    </div>
+    <div class="lifestyle-copy">
       <div class="eyebrow">Le cadre de vie</div>
       <h2>Saint-Calixte, entre nature et village</h2>
-    </div>
-    <div class="building" style="padding:36px 30px;">
-      <p style="font-size:0.98rem;color:#43413a;line-height:1.8;max-width:70ch;margin:0 auto;text-align:center;">
-        Nichée dans la région de Lanaudière, Saint-Calixte est reconnue pour ses lacs, ses sentiers et son cadre naturel — un secteur prisé pour le plein air été comme hiver, tout en restant à distance raisonnable de Montréal. La Cité St-Calixte profite de cet équilibre : le calme d'un village entouré de nature, avec les commerces essentiels à quelques minutes.
-      </p>
+      <p>Nichée dans la région de Lanaudière, Saint-Calixte est reconnue pour ses lacs, ses sentiers et son cadre naturel — un secteur prisé pour le plein air été comme hiver, tout en restant à distance raisonnable de Montréal. La Cité St-Calixte profite de cet équilibre : le calme d'un village entouré de nature, avec les commerces essentiels à quelques minutes.</p>
+      <div class="lifestyle-tags">
+        <span>Lacs &amp; sentiers</span>
+        <span>Plein air 4 saisons</span>
+        <span>Près de Montréal</span>
+      </div>
     </div>
   </div>
 </section>
@@ -404,11 +528,11 @@ footer a:hover{text-decoration:underline;}
   <div class="wrap" style="text-align:center;">
     <div class="eyebrow" style="margin-bottom:6px;">À afficher sur vos publicités</div>
     <h2 style="font-size:1.4rem;margin-bottom:16px;">Scannez pour voir les logements disponibles</h2>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&color=171512&bgcolor=F3EFE6&data=https%3A%2F%2Flogisstcalixte.netlify.app%2F%23immeubles"
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&color=171512&bgcolor=F3EFE6&data=https%3A%2F%2Fcondostcalixte.netlify.app%2F%23immeubles"
          alt="Code QR vers le site Cité St-Calixte"
          width="180" height="180"
          style="border:1px solid #D8D0BC;border-radius:6px;padding:10px;background:var(--white);">
-    <div class="mono" style="font-size:0.8rem;color:#8a8577;margin-top:10px;">logisstcalixte.netlify.app</div>
+    <div class="mono" style="font-size:0.8rem;color:#8a8577;margin-top:10px;">condostcalixte.netlify.app</div>
   </div>
 </section>
 
@@ -586,12 +710,12 @@ function makeUnits(prefix){
 const DEFAULT_DATA = {
   buildings: [
     {
-      id:"j175", name:"175, rue Jocelyne", address:"175, rue Jocelyne, Saint-Calixte (Québec)", availableFrom:"1er janvier 2027",
-      units: makeUnits("j175")
-    },
-    {
       id:"j185", name:"185, rue Jocelyne", address:"185, rue Jocelyne, Saint-Calixte (Québec)", availableFrom:"15 octobre 2026",
       units: makeUnits("j185")
+    },
+    {
+      id:"j175", name:"175, rue Jocelyne", address:"175, rue Jocelyne, Saint-Calixte (Québec)", availableFrom:"1er janvier 2027",
+      units: makeUnits("j175")
     },
     {
       id:"j195", name:"195, rue Jocelyne", address:"195, rue Jocelyne, Saint-Calixte (Québec)", availableFrom:"1er mars 2027",
