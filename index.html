@@ -246,6 +246,44 @@ footer a:hover{text-decoration:underline;}
   .hero-art{order:-1;}
   .form-grid{grid-template-columns:1fr;}
 }
+/* Mobile : entête, textes et fenêtres */
+.unit-top{gap:8px;flex-wrap:wrap;}
+.status{flex-shrink:0;}
+@media(max-width:560px){
+  html{-webkit-text-size-adjust:100%;}
+  .wrap{padding:0 16px;}
+  header{padding:10px 0;}
+  header .wrap{gap:8px;}
+  .logo{font-size:1rem;gap:7px;white-space:nowrap;}
+  .logo svg{width:22px;height:22px;flex-shrink:0;}
+  .admin-link{padding:7px 9px;font-size:0.66rem;white-space:nowrap;letter-spacing:0;}
+  .hero{padding:30px 0 40px;}
+  .hero .wrap{gap:20px;}
+  .hero-art svg{max-height:130px;}
+  .hero-eyebrow{font-size:0.68rem;letter-spacing:0.08em;}
+  .hero h1{font-size:1.9rem;}
+  .hero p{font-size:0.95rem;max-width:none;}
+  .hero-stats{gap:14px;flex-wrap:wrap;}
+  .hero-stats .n{font-size:1.25rem;}
+  .hero-stats .l{font-size:0.72rem;}
+  .section{padding:40px 0;}
+  .section-head h2,.lifestyle-copy h2{font-size:1.45rem;}
+  .building-head{padding:16px;}
+  .building-head h3{font-size:1.2rem;}
+  .building-head .addr{font-size:0.76rem;word-break:break-word;}
+  .building [style*="padding:36px 30px"]{padding:24px 18px !important;}
+  .unit{padding:16px;}
+  .unit-actions{flex-wrap:wrap;}
+  .unit-actions button{min-width:130px;}
+  .overlay{padding:10px;align-items:flex-start;}
+  .modal{max-height:94vh;}
+  .modal-head{padding:14px 16px;gap:10px;}
+  .modal-head h3{font-size:1rem;}
+  .modal-body{padding:16px;}
+  .plan-frame{padding:8px;}
+  input,select,textarea{font-size:16px;}
+  .lifestyle-copy p{font-size:0.95rem;}
+}
 </style>
 </head>
 <body>
